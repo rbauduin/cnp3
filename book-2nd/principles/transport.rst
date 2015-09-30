@@ -191,7 +191,7 @@ As the transport layer is built on top of the network layer, it is important to 
    The transport layer 
 
 
-These imperfections of the `connectionless network layer service` are caused by the operations of the `network layer`. This `layer` is able to deliver packets to their intended destination, but it cannot guarantee this delivery. The main cause of packet losses and errors are the buffers used on the network nodes. If the buffers of one of these nodes becomes full, all arriving packets must be discarded. This situation happens frequently in practice. Transmission errors can also affect packet transmissions on links where reliable transmission techniques are not enabled or because of errors in the buffers of the network nodes.
+These imperfections of the `connectionless network layer service` are caused by the operations of the `network layer`. This `layer` is able to deliver packets to their intended destination, but it cannot guarantee this delivery. The main cause of packet losses and errors are the buffers used on the network nodes. If the buffers of one of these nodes become full, all arriving packets must be discarded. This situation happens frequently in practice. Transmission errors can also affect packet transmissions on links where reliable transmission techniques are not enabled or because of errors in the buffers of the network nodes.
 
 Transport layer services
 ------------------------
@@ -268,7 +268,7 @@ The third phase of a connection is when it needs to be released. As a connection
    Abrupt connection release initiated by the service provider
 
 
-An abrupt connection release can also be triggered by one of the users. If a user needs, for any reason, to terminate a connection quickly, it can issue a `Disconnect.request` primitive and to request an abrupt release. The service provider will process the request, stop the two data streams and deliver the `Disconnect.indication` primitive to the remote user as soon as possible. As illustrated in the figure below, this abrupt connection release may cause losses of SDUs.
+An abrupt connection release can also be triggered by one of the users. If a user needs, for any reason, to terminate a connection quickly, it can issue a `Disconnect.request` primitive to request an abrupt release. The service provider will process the request, stop the two data streams and deliver the `Disconnect.indication` primitive to the remote user as soon as possible. As illustrated in the figure below, this abrupt connection release may cause losses of SDUs.
 
 
 .. figure:: ../../book/intro/svg/intro-figures-023-c.png
@@ -330,7 +330,7 @@ The `request-response service` allows to efficiently exchange small amounts of i
 The transport layer
 -------------------
 
-The transport layer entity interacts with both a user in the application layer and the network layer. It improves the network layer service to make it useable by applications. From the application's viewpoint, the main limitations of the network layer service that its service is unreliable: 
+The transport layer entity interacts with both a user in the application layer and the network layer. It improves the network layer service to make it useable by applications. From the application's viewpoint, the main limitations of the network layer service is that its service is unreliable: 
 
  - the network layer may corrupt data
  - the network layer may loose data
